@@ -133,6 +133,7 @@ class PatientDB:
             keys = result.keys()
             values = result.fetchone()
             patient = self.row_to_dict(keys, values)
+            print(patient)
             return patient
         except SQLAlchemyError as e:
             print("Error occurred while selecting the patient", e)
